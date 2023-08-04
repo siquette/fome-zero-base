@@ -130,7 +130,7 @@ if __name__ == "__main__":
 
 st.markdown(
     """
-   A Cury Company é uma empresa de tecnologia que criou um aplicativo
+ A Cury Company é uma empresa de tecnologia que criou um aplicativo
 que conecta restaurantes, entregadores e pessoas.
 Através desse aplicativo, é possível realizar o pedido de uma refeição, em
 qualquer restaurante cadastrado, e recebê-lo no conforto da sua casa por
@@ -150,28 +150,10 @@ que fazer o intermédio do negócio entre três clientes principais:
 Restaurantes, entregadores e pessoas compradoras. Para acompanhar o
 crescimento desses negócios, o CEO gostaria de ver as seguintes
 métricas de crescimento:
-### Do lado da empresa:
-1. Quantidade de pedidos por dia.
-2. Quantidade de pedidos por semana.
-3. Distribuição dos pedidos por tipo de tráfego.
-4. Comparação do volume de pedidos por cidade e tipo de tráfego.
-4. A quantidade de pedidos por entregador por semana.
-5. A localização central de cada cidade por tipo de tráfego.
-### Do lado do entregador:
-1. A menor e maior idade dos entregadores.
-2. A pior e a melhor condição de veículos.
-3. A avaliação médida por entregador.
-4. A avaliação média e o desvio padrão por tipo de tráfego.
-5. A avaliação média e o desvio padrão por condições climáticas.
-6. Os 10 entregadores mais rápidos por cidade.
-7. Os 10 entregadores mais lentos por cidade.
-### Do lado do restaurantes:
-1. A quantidade de entregadores únicos.
-2. A distância média dos resturantes e dos locais de entrega.
-3. O tempo médio e o desvio padrão de entrega por cidade.
-4. O tempo médio e o desvio padrão de entrega por cidade e tipo de pedido.
-5. O tempo médio e o desvio padrão de entrega por cidade e tipo de tráfego.
-6. O tempo médio de entrega durantes os Festivais.
+1. Visão do crescimento da empresa
+2. Visão do crescimento dos restaurantes
+3. Visão do crescimento dos entregadores
+
 ### O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exibam essas métricas da melhor forma possível para o CEO.
 2. Premissas assumidas para a análise
 1. A análise foi realizada com dados entre 11/02/2022 e 06/04/2022.
@@ -217,7 +199,30 @@ clima ensoladao.
 #### 5. O produto final do projeto
 Painel online, hospedado em um Cloud e disponível para acesso em
 qualquer dispositivo conectado à internet.
-O painel pode ser acessado através desse link: https://project-currycompany.streamlit.app/
+  
+### Do lado da empresa:
+1. Quantidade de pedidos por dia.
+2. Quantidade de pedidos por semana.
+3. Distribuição dos pedidos por tipo de tráfego.
+4. Comparação do volume de pedidos por cidade e tipo de tráfego.
+4. A quantidade de pedidos por entregador por semana.
+5. A localização central de cada cidade por tipo de tráfego.
+### Do lado do entregador:
+1. A menor e maior idade dos entregadores.
+2. A pior e a melhor condição de veículos.
+3. A avaliação médida por entregador.
+4. A avaliação média e o desvio padrão por tipo de tráfego.
+5. A avaliação média e o desvio padrão por condições climáticas.
+6. Os 10 entregadores mais rápidos por cidade.
+7. Os 10 entregadores mais lentos por cidade.
+### Do lado do restaurantes:
+1. A quantidade de entregadores únicos.
+2. A distância média dos resturantes e dos locais de entrega.
+3. O tempo médio e o desvio padrão de entrega por cidade.
+4. O tempo médio e o desvio padrão de entrega por cidade e tipo de pedido.
+5. O tempo médio e o desvio padrão de entrega por cidade e tipo de tráfego.
+6. O tempo médio de entrega durantes os Festivais.
+
 #### 6. Conclusão
 O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que
 exibam essas métricas da melhor forma possível para o CEO.
