@@ -130,112 +130,108 @@ if __name__ == "__main__":
 
 st.markdown(
     """
- A Cury Company é uma empresa ficticia de tecnologia que criou um aplicativo
-que conecta restaurantes, entregadores e pessoas.
-Através desse aplicativo, é possível realizar o pedido de uma refeição, em
-qualquer restaurante cadastrado, e recebê-lo no conforto da sua casa por
-um entregador também cadastrado no aplicativo da Cury Company.
-A empresa realiza negócios entre restaurantes, entregadores e pessoas,
-e gera muitos dados sobre entregas, tipos de pedidos, condições
-climáticas, avaliação dos entregadores e etc. Apesar da entrega estar
-crescento, em termos de entregas, o CEO não tem visibilidade completa
-dos KPIs de crescimento da empresa.
-Eu foi contratado como um Cientista de Dados para criar soluções de
-dados para entrega, mas antes de treinar algoritmos, a necessidade da
-empresa é ter um os principais KPIs estratégicos organizados em uma
-única ferramenta, para que o CEO possa consultar e conseguir tomar
-decisões simples, porém importantes.
-A Cury Company possui um modelo de negócio chamado Marketplace,
-que fazer o intermédio do negócio entre três clientes principais:
-Restaurantes, entregadores e pessoas compradoras. Para acompanhar o
-crescimento desses negócios, o CEO gostaria de ver as seguintes
-métricas de crescimento:
+### Contexto do Problema de Negócio
+Parabéns! Você acaba de ser contratado como Cientista de Dados da empresa
+Fome Zero, e a sua principal tarefa nesse momento é ajudar o CEO Kleiton Guerra
+a identificar pontos chaves da empresa, respondendo às perguntas que ele fizer
+utilizando dados!
+A empresa Fome Zero é uma marketplace de restaurantes. Ou seja, seu core
+business é facilitar o encontro e negociações de clientes e restaurantes. Os
+restaurantes fazem o cadastro dentro da plataforma da Fome Zero, que disponibiliza
+informações como endereço, tipo de culinária servida, se possui reservas, se faz
+entregas e também uma nota de avaliação dos serviços e produtos do restaurante,
+dentre outras informações.
 
-### Do lado da empresa:
-1. Quantidade de pedidos por dia.
-2. Quantidade de pedidos por semana.
-3. Distribuição dos pedidos por tipo de tráfego.
-4. Comparação do volume de pedidos por cidade e tipo de tráfego.
-4. A quantidade de pedidos por entregador por semana.
-5. A localização central de cada cidade por tipo de tráfego
+##3 O Desafio
 
-### Do lado do entregador:
-1. A menor e maior idade dos entregadores.
-2. A pior e a melhor condição de veículos.
-3. A avaliação médida por entregador.
-4. A avaliação média e o desvio padrão por tipo de tráfego.
-5. A avaliação média e o desvio padrão por condições climáticas.
-6. Os 10 entregadores mais rápidos por cidade.
-7. Os 10 entregadores mais lentos por cidade
+O CEO Guerra também foi recém contratado e precisa entender melhor o negócio
+para conseguir tomar as melhores decisões estratégicas e alavancar ainda mais a
+Fome Zero, e para isso, ele precisa que seja feita uma análise nos dados da
+empresa e que sejam gerados dashboards, a partir dessas análises, para responder
+às seguintes perguntas:
+Geral
+1. Quantos restaurantes únicos estão registrados?
+2. Quantos países únicos estão registrados?
+3. Quantas cidades únicas estão registradas?
+4. Qual o total de avaliações feitas?
+5. Qual o total de tipos de culinária registrados?
 
-### Do lado do restaurantes:
-1. A quantidade de entregadores únicos.
-2. A distância média dos resturantes e dos locais de entrega.
-3. O tempo médio e o desvio padrão de entrega por cidade.
-4. O tempo médio e o desvio padrão de entrega por cidade e tipo de pedido.
-5. O tempo médio e o desvio padrão de entrega por cidade e tipo de tráfego.
-6. O tempo médio de entrega durantes os Festivais.
+##3 Pais
+1. Qual o nome do país que possui mais cidades registradas?
+2. Qual o nome do país que possui mais restaurantes registrados?
+3. Qual o nome do país que possui mais restaurantes com o nível de preço igual a 4
+registrados?
+4. Qual o nome do país que possui a maior quantidade de tipos de culinária
+distintos?
+5. Qual o nome do país que possui a maior quantidade de avaliações feitas?
+6. Qual o nome do país que possui a maior quantidade de restaurantes que fazem
+entrega?
+7. Qual o nome do país que possui a maior quantidade de restaurantes que aceitam
+reservas?
+8. Qual o nome do país que possui, na média, a maior quantidade de avaliações
+registrada?
+9. Qual o nome do país que possui, na média, a maior nota média registrada?
+10. Qual o nome do país que possui, na média, a menor nota média registrada?
+11. Qual a média de preço de um prato para dois por país?
+### Cidade
+1. Qual o nome da cidade que possui mais restaurantes registrados?
+2. Qual o nome da cidade que possui mais restaurantes com nota média acima de
+4?
+3. Qual o nome da cidade que possui mais restaurantes com nota média abaixo de
+2.5?
+4. Qual o nome da cidade que possui o maior valor médio de um prato para dois?
 
-O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exibam essas métricas da melhor forma possível para o CEO.
+5. Qual o nome da cidade que possui a maior quantidade de tipos de culinária
+distintas?
+6. Qual o nome da cidade que possui a maior quantidade de restaurantes que fazem
+reservas?
+7. Qual o nome da cidade que possui a maior quantidade de restaurantes que fazem
+entregas?
+8. Qual o nome da cidade que possui a maior quantidade de restaurantes que
+aceitam pedidos online?
+### Restaurantes
+1. Qual o nome do restaurante que possui a maior quantidade de avaliações?
+2. Qual o nome do restaurante com a maior nota média?
+3. Qual o nome do restaurante que possui o maior valor de uma prato para duas
+pessoas?
+4. Qual o nome do restaurante de tipo de culinária brasileira que possui a menor
+média de avaliação?
+5. Qual o nome do restaurante de tipo de culinária brasileira, e que é do Brasil, que
+possui a maior média de avaliação?
+6. Os restaurantes que aceitam pedido online são também, na média, os
+restaurantes que mais possuem avaliações registradas?
+7. Os restaurantes que fazem reservas são também, na média, os restaurantes que
+possuem o maior valor médio de um prato para duas pessoas?
+8. Os restaurantes do tipo de culinária japonesa dos Estados Unidos da América
+possuem um valor médio de prato para duas pessoas maior que as churrascarias
+americanas (BBQ)?
 
-### Premissas assumidas para a análise
-1. A análise foi realizada com dados entre 11/02/2022 e 06/04/2022.
-2. Marketplace foi o modelo de negócio assumido.
-3. Os 3 principais visões do negócio foram: Visão transação de pedidos,
-visão restaurante e visão entregadores.
-
-### Estratégia da solução
-O painel estratégico foi desenvolvido utilizando as métricas que refletem
-as 3 principais visões do modelo de negócio da empresa:
-1. Visão do crescimento da empresa
-2. Visão do crescimento dos restaurantes
-3. Visão do crescimento dos entregadores
-
-Cada visão é representada pelo seguinte conjunto de métricas.
-
-#### 1. Visão do crescimento da empresa
-a. Pedidos por dia
-b. Porcentagem de pedidos por condições de trânsito
-c. Quantidade de pedidos por tipo e por cidade.
-d. Pedidos por semana
-e. Quantidade de pedidos por tipo de entrega
-f. Quantidade de pedidos por condições de trânsito e tipo de cidade
-#### 2. Visão do crescimento dos restaurantes
-a. Quantidade de pedidos únicos.
-b. Distância média percorrida.
-c. Tempo médio de entrega durante festival e dias normais.
-d. Desvio padrão do tempo de entrega durante festivais e dias
-normais.
-e. Tempo de entrega médio por cidade.
-f. Distribuição do tempo médio de entrega por cidade.
-g. Tempo médio de entrega por tipo de pedido.
-#### 3. Visão do crescimento dos entregadores
-a. Idade do entregador mais velho e do mais novo.
-b. Avaliação do melhor e do pior veículo.
-c. Avaliação média por entregador.
-d. Avaliação média por condições de trânsito.
-e. Avaliação média por condições climáticas.
-f. Tempo médido do entregador mais rápido.
-g. Tempo médio do entregador mais rápido por cidade
-
-### Top 3 Insights de dados
-1. A sazonalidade da quantidade de pedidos é diária. Há uma variação
-de aproximadamente 10% do número de pedidos em dia sequenciais.
-2. As cidades do tipo Semi-Urban não possuem condições baixas de
-trânsito.
-3. As maiores variações no tempo de entrega, acontecem durante o
-clima ensoladao.
-### 5. O produto final do projeto
-Painel online, hospedado em um Cloud e disponível para acesso em
-qualquer dispositivo conectado à internet
-
-
-### 6. Conclusão
-O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que
-exibam essas métricas da melhor forma possível para o CEO.
-Da visão da Empresa, podemos concluir que o número de pedidos
-cresceu entre a semana 06 e a semana 13 do ano de 2022
-
+### Tipos de Culinária
+1. Dos restaurantes que possuem o tipo de culinária italiana, qual o nome do
+restaurante com a maior média de avaliação?
+2. Dos restaurantes que possuem o tipo de culinária italiana, qual o nome do
+restaurante com a menor média de avaliação?
+3. Dos restaurantes que possuem o tipo de culinária americana, qual o nome do
+restaurante com a maior média de avaliação?
+4. Dos restaurantes que possuem o tipo de culinária americana, qual o nome do
+restaurante com a menor média de avaliação?
+5. Dos restaurantes que possuem o tipo de culinária árabe, qual o nome do
+restaurante com a maior média de avaliação?
+6. Dos restaurantes que possuem o tipo de culinária árabe, qual o nome do
+restaurante com a menor média de avaliação?
+7. Dos restaurantes que possuem o tipo de culinária japonesa, qual o nome do
+restaurante com a maior média de avaliação?
+8. Dos restaurantes que possuem o tipo de culinária japonesa, qual o nome do
+restaurante com a menor média de avaliação?
+9. Dos restaurantes que possuem o tipo de culinária caseira, qual o nome do
+restaurante com a maior média de avaliação?
+10. Dos restaurantes que possuem o tipo de culinária caseira, qual o nome do
+restaurante com a menor média de avaliação?
+11. Qual o tipo de culinária que possui o maior valor médio de um prato para duas
+pessoas?
+12. Qual o tipo de culinária que possui a maior nota média?
+13. Qual o tipo de culinária que possui mais restaurantes que aceitam pedidos
+online e fazem entregas?
 
 - Discord para contato : rodrigoaronisiquette
 - Email para contato : rodrigo.siquette@usp.br
