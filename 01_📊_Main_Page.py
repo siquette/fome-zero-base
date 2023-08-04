@@ -156,7 +156,7 @@ Geral
 4. Qual o total de avaliações feitas?
 5. Qual o total de tipos de culinária registrados?
 
-##3 Pais
+### Pais
 1. Qual o nome do país que possui mais cidades registradas?
 2. Qual o nome do país que possui mais restaurantes registrados?
 3. Qual o nome do país que possui mais restaurantes com o nível de preço igual a 4
