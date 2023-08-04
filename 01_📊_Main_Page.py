@@ -184,7 +184,7 @@ métricas de crescimento:
 2. Visão do crescimento dos restaurantes
 3. Visão do crescimento dos entregadores
 ### Cada visão é representada pelo seguinte conjunto de métricas.
-## 1. Visão do crescimento da empresa
+#### 1. Visão do crescimento da empresa
 a. Pedidos por dia
 b. Porcentagem de pedidos por condições de trânsito
 c. Quantidade de pedidos por tipo e por cidade.
